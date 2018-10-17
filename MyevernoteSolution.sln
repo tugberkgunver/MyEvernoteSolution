@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myevernote.WebApp", "Myevernote.WebApp\Myevernote.WebApp.csproj", "{7D28D560-D775-49B2-92FC-683920EC6BEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEvernote.BusinessLayer", "MyEvernote.BusinessLayer\MyEvernote.BusinessLayer.csproj", "{982F9529-C927-49AD-9D64-B1D27461EFF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEvernote.DataAccessLayer", "MyEvernote.DataAccessLayer\MyEvernote.DataAccessLayer.csproj", "{3FBFC13C-625E-4028-9C42-4B1FF30BED09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7D28D560-D775-49B2-92FC-683920EC6BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D28D560-D775-49B2-92FC-683920EC6BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D28D560-D775-49B2-92FC-683920EC6BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982F9529-C927-49AD-9D64-B1D27461EFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982F9529-C927-49AD-9D64-B1D27461EFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982F9529-C927-49AD-9D64-B1D27461EFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982F9529-C927-49AD-9D64-B1D27461EFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBFC13C-625E-4028-9C42-4B1FF30BED09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBFC13C-625E-4028-9C42-4B1FF30BED09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBFC13C-625E-4028-9C42-4B1FF30BED09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBFC13C-625E-4028-9C42-4B1FF30BED09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
