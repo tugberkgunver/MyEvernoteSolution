@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyEvernote.Entities
 {
+    //Bunlar yerine fluent Api kullanılabilir.
     [Table("EvernoteUsers")]
    public class EvernoteUser : MyEntityBase
     {
@@ -19,9 +20,14 @@ namespace MyEvernote.Entities
 
         [Required,StringLength(25)]
         public string Username { get; set; }
+
+        [Required,StringLength(70)]
         public string Email { get; set; }
+
+        [Required,StringLength(25)]
         public string Password { get; set; }
         public bool IsActive { get; set; }
+        [Required]
         public Guid ActivateGuid { get; set; }
         public bool IsAdmin { get; set; }
 

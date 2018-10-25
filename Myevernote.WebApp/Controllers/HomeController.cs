@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyEvernote.BusinessLayer;
+using MyEvernote.Entities;
 
 namespace Myevernote.WebApp.Controllers
 {
@@ -11,7 +13,9 @@ namespace Myevernote.WebApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            NoteManager nm = new NoteManager();
+            List<Note> notes = nm.GetNotes();
+            return View(notes);
         }
     }
 }
