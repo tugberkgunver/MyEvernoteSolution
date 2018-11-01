@@ -1,4 +1,5 @@
-﻿
+﻿@using MyEvernote.Entities
+@model List<Note>
 @{
     ViewBag.Title = "Index";
 }
@@ -36,162 +37,38 @@
             </div>
 
             <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">@item.Title</a>
+                                </h4>
+                                <h6><span class="fa fa-user fa-fw"></span>@item.ModifiedUser</h6>
+                                <h6><span class="fa fa-calendar-times-o fa-fw"></span>@item.CreatedOn.ToString("dd.MM.yy HH:mm")</h6>
+                                <p class="card-text">@item.Text</p>
+                                <p><a href="#">Devamını Oku..</a></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="pull-right">
+                                    <button class="btn btn-info btn-sm">
+                                        <span class="fa fa-comment"></span>
+                                    </button>
+                                </p>
+                                <p>
+                                    <button class="btn btn-info btn-sm">
+                                        <span class="fa fa-star"></span> @item.LikeCount
+                                    </button>
+                                </p>
+                            </div>
+
+
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item One</a>
-                            </h4>
-                            <h6><span class="fa fa-user fa-fw"></span>tugberkgunver</h6>
-                            <h6><span class="fa fa-calendar-times-o fa-fw"></span>01.01.2017 13:34</h6>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="pull-right">
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-comment">Yorumlar</span>
-                                </button>
-                            </p>
-                            <p>
-                                <button class="btn btn-info btn-sm">
-                                    <span class="fa fa-star"></span> 15
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                }
 
 
 

@@ -11,9 +11,11 @@ namespace MyEvernote.DataAccessLayer.Abstract
     {
         //Burada interface ile soyutlaştırma gerçekleştirdik. Örneğin Mysql,Oracle değişikliğimiz oldu.Bu sayede kullanabileceğiz.
          List<T> List();
-        
 
-         int Save();
+        IQueryable<T> ListQueryable();
+     
+
+        int Save();
         
 
          int Insert(T obj);

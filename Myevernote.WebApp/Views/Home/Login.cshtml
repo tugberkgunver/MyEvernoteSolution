@@ -1,0 +1,48 @@
+﻿@using Myevernote.Entities.ViewModels
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+<link href="~/Content/Login.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+    <div style="margin-top:25px;" class="col-xs-12 col-sm-8 col-md-12 ">
+        <form role="form">
+            <fieldset>
+                <h2>Lütfen giriş yapınız</h2>
+                <hr class="colorgraph">
+                <div class="form-group">
+                    @Html.TextBoxFor(Model => Model.Username, new { @class = "form-control input-lg", placeholder = "Kullanıcı Adınız" })
+
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(Model => Model.Password, new { @class = "form-control input-lg", placeholder = "Şifreniz", type="password" })
+                </div>
+
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Giriş">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <a href="" class="btn btn-lg btn-primary btn-block">Üye Ol</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+}
+
+
+
+
+<script>
+    $(function () {
+        $("footer").hide();
+        $("#hideforlogin").hide();
+    });
+
+</script>
+

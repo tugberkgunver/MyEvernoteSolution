@@ -1,5 +1,6 @@
 ﻿using MyEvernote.DataAccessLayer;
 using MyEvernote.DataAccessLayer.Abstract;
+using MyEvernote.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -33,6 +34,12 @@ namespace MyEvernote.DataAccessLayer.EntityFramework
             return _objectSet.ToList();   
         }
 
+
+        public IQueryable<T> ListQueryable()
+        {
+            return _objectSet.AsQueryable<T>();
+        }
+
         public int Save()
         {
            return context.SaveChanges();
@@ -41,11 +48,30 @@ namespace MyEvernote.DataAccessLayer.EntityFramework
         public int Insert(T obj)
         {
             _objectSet.Add(obj);
+
+            if (obj is MyEntityBase)
+            {
+                MyEntityBase o = obj as MyEntityBase;
+                DateTime now = DateTime.Now;
+
+                o.CreatedOn = now;
+                o.ModifiedOn = now;
+                o.ModifiedUser = "system";
+
+            }
             return Save();
         }
 
         public int Update(T obj)
         {
+            if (obj is MyEntityBase)
+            {
+                MyEntityBase o = obj as MyEntityBase;
+               
+                o.ModifiedOn = DateTime.Now;
+                o.ModifiedUser = "system";
+
+            }
             return Save();
         }
 

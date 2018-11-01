@@ -60,19 +60,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/MostLiked">
                             <span class="fa fa-star"></span>
                             En Beğenilenler
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/LastNotes">
                             <span class="fa fa-th-list"></span>
                             Son Yazılanlar
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/About">
                             <span class="fa fa-info-circle"></span>
                             Hakkımızda
                         </a>
@@ -111,14 +111,14 @@
 
         <div class="row">
 
-            <div class="col-lg-3">
+            <div id="hideforlogin" class="col-lg-3">
 
                 <h1 class="my-4">Kategoriler</h1>
                 <div class="list-group">
                     @foreach (var item in ct)
                     {
 
-                        <a href="/Category/Select/@item.Id" title="@item.Description" class="list-group-item"><span class="fa fa-dot-circle-o fa-fw"></span>@item.Title</a>
+                        <a href="/Home/ByCategory/@item.Id" title="@item.Description" class="list-group-item"><span class="fa fa-dot-circle-o fa-fw"></span>@item.Title</a>
                     }
 
                 </div>
@@ -137,9 +137,9 @@
                             <h5>Site Haritası</h5>
                             <hr />
                             <p class="m-0 text-center text-white">
-                                <a href="#">Hakkımızda</a><br />
-                                <a href="#">En Beğenilenler</a><br />
-                                <a href="#">Son Yazılanlar</a><br />
+                                <a href="/Home/About">Hakkımızda</a><br />
+                                <a href="/Home/MostLiked">En Beğenilenler</a><br />
+                                <a href="/Home/LastNotes">Son Yazılanlar</a><br />
                             </p>
                         </div>
                         <div class="col-lg-4 text-center">
